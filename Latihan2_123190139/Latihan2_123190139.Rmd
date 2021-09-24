@@ -1,0 +1,51 @@
+---
+title: "Latihan 2_123190139"
+author: "Yessika Nur"
+date: "9/24/2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r}
+1.
+library(dslabs)
+data(murders)
+
+str(murders)
+```
+a. Terdiri dari 51 negara.**(Benar)**
+b. Data berisi tingkat pembunuhan pada 50 negara bagian dan DC.**(Benar)**
+c. Data berisi Nama negara bagian, singkatan dari nama negara bagian, wilayah
+negara bagian, dan populasi negara bagian serta jumlah total pembunuhan pada
+tahun 2010.**(Benar)**
+d. str tidak menunjukkan informasi yang relevan.**(Salah)**
+
+```{r}
+2
+names(murders)
+```
+```{r}
+3.
+murders$abb
+a = murders$abb
+class(a)
+```
+Kelas a = character
+```{r}
+4.
+murders[[2]]
+b = murders[[2]]
+class(b)
+```
+Nilai a dan b bernilai sama dan bertipe data sama yaitu character
+```{r}
+5.
+levels(murders$region)
+length(murders$region)
+```
+
+```{r}
+6.
+table(state.region)
+```
