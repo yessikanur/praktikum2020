@@ -1,0 +1,69 @@
+---
+title: "Latihan3_123190139"
+author: "Yessika Nur"
+date: "9/30/2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+**1.**
+```{r}
+library(dslabs)
+data(murders)
+
+pop = murders$population
+sort(pop)
+terkecil <- sort(pop, decreasing = FALSE)
+terkecil[1]
+
+```
+
+**2.**
+```{r} 
+index = order(pop)
+index[1]
+
+```
+
+**3.**
+```{r}
+which.min(pop)[1]
+```
+
+**4.**
+```{r}
+murders$state[which.min(pop)[1]]
+```
+
+**5.**
+```{r}
+ranks <- rank(pop)
+my_df <- data.frame(state = murders$state, rank = ranks)
+my_df
+```
+
+**6.**
+```{r}
+ind <- order(pop)
+my_df <- data.frame(state = murders$state[ind], rank = ranks[ind], index =
+ind)
+my_df
+```
+
+**7.**
+```{r}
+population_in_milion <- log10(murders$population)
+total_gun_murders <- murders$total
+plot(population_in_milion, total_gun_murders)
+```
+
+**8.**
+```{r}
+hist(population_in_milion, main = "Populasi Negara Bagian", xlab 
+= "Population")
+```
+
+**9.**
+```{r}
+boxplot(population_in_milion~region, data = murders)
+```
